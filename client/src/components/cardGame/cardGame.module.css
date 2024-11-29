@@ -1,0 +1,94 @@
+.card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light);
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  gap: 0.25em;
+  text-align: center;
+  box-shadow: -0.5vh 0.5vh 1vh var(--dark);
+}
+
+.imageBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 7rem;
+  min-width: 7.5rem;
+  max-height: 7rem;
+  max-width: 7.5rem;
+}
+
+.image {
+  max-height: 7rem;
+  max-width: 7.5rem;
+  object-fit: contain;
+  box-shadow: -3px 3px 5px 0px var(--dark);
+
+  &:hover {
+    opacity: 50%;
+  }
+  &:active {
+    transform: scale(5);
+  }
+}
+
+.title {
+  display: inline-block;
+  max-height: 2rem;
+  min-height: 2rem;
+  max-width: 8rem;
+  min-width: 8rem;
+  font-family: var(--title-font);
+  font-size: 0.8em;
+}
+
+.button {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--light);
+  width: 2rem;
+}
+
+.heartOff {
+  fill: var(--cold-color);
+  opacity: 25%;
+  transition: all 0.2s ease-out;
+  &:hover {
+    opacity: 100%;
+    fill: var(--cold-color);
+    transform: translateY(-0.25rem);
+  }
+  &:active {
+    fill: red;
+    opacity: 100%;
+    transform: scale(1.5);
+  }
+}
+
+.heartOn {
+  fill: var(--warm-color);
+  transition: all 0.2s ease-out;
+  &:hover {
+    opacity: 100%;
+    fill: var(--warm-color);
+    transform: translateY(-0.25rem);
+  }
+  &:active {
+    fill: var(--cold-color);
+    opacity: 100%;
+    transform: scale(1.5);
+  }
+}

@@ -1,0 +1,11 @@
+/*Image de fond*/
+.header {
+  background: url("../../assets/images/banniere.jpg");
+  height: 15vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 45%;
+  @media screen and (max-width: 768px) {
+    height: 10vh;
+  }
+}

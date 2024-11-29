@@ -7,8 +7,14 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-
 // Import additional components for new routes
+import Error404Page from "./pages/error404Page/Error404Page.tsx";
+import ErrorGameNotFound from "./pages/errorGameNotFound/ErrorGameNotFound.tsx";
+import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
+import GameDetailsPage from "./pages/gameDetailsPage/GameDetailsPage";
+import HomePage from "./pages/homePage/HomePage";
+import LibraryPage from "./pages/libraryPage/LibraryPage";
+
 // Try creating these components in the "pages" folder
 
 // import About from "./pages/About";
@@ -20,9 +26,41 @@ import App from "./App";
 // You can add more routes as you build out your app!
 const router = createBrowserRouter([
   {
-    path: "/", // The root path
-    element: <App />, // Renders the App component for the home page
+    element: <App />,
+    loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
+      },
+      {
+        path: "/library",
+        element: <LibraryPage />,
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
+      },
+      {
+        path: "/details/:id",
+        element: <GameDetailsPage />,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API_URL_DETAILS}/${params.id}`),
+      },
+      {
+        path: "*",
+        element: <Error404Page />,
+      },
+      {
+        path: "/notfound",
+        element: <ErrorGameNotFound />,
+      },
+      {
+        path: "/favorites",
+        element: <FavoritesPage />,
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
+      },
+    ],
   },
+
   // Try adding a new route! For example, "/about" with an About component
 ]);
 
@@ -38,31 +76,30 @@ if (rootElement == null) {
 createRoot(rootElement).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
 
 /**
  * Helpful Notes:
- * 
+ *
  * 1. Adding More Routes:
  *    To add more pages to your app, first create a new component (e.g., About.tsx).
  *    Then, import that component above like this:
- * 
+ *
  *    import About from "./pages/About";
- * 
+ *
  *    Add a new route to the router:
- * 
+ *
  *      {
  *        path: "/about",
  *        element: <About />,  // Renders the About component
  *      }
- * 
+ *
  * 2. Try Nested Routes:
  *    For more complex applications, you can nest routes. This lets you have sub-pages within a main page.
  *    Documentation: https://reactrouter.com/en/main/start/tutorial#nested-routes
- * 
+ *
  * 3. Experiment with Dynamic Routes:
  *    You can create routes that take parameters (e.g., /users/:id).
  *    Documentation: https://reactrouter.com/en/main/start/tutorial#url-params-in-loaders
  */
-

@@ -1,0 +1,86 @@
+/*Image de fond*/
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("../../assets/images/banniere.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-attachment: scroll;
+  height: 80vh;
+  background-size: cover;
+  @media screen and (max-width: 768px) {
+    height: 60vh;
+  }
+}
+/*Style des titres*/
+.title {
+  padding-left: 3rem;
+  padding-top: 3rem;
+  font-family: var(--main-title-font);
+  color: var(--title-color);
+  @media screen and (max-width: 768px) {
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+}
+.titlePage {
+  font-size: 9vw;
+  text-align: left;
+  text-shadow: -0.3rem 0.2rem var(--dark);
+  @media screen and (max-width: 768px) {
+    font-size: 10vw;
+    text-shadow: -0.2rem 0.1rem var(--dark);
+  }
+}
+.subtitle {
+  font-size: 3.5vw;
+  padding-left: 4rem;
+  text-shadow: -0.2rem 0.1rem var(--dark);
+  @media screen and (max-width: 768px) {
+    font-size: 5vw;
+    padding-left: 1rem;
+    text-shadow: -0.05rem 0.05rem var(--dark);
+  }
+}
+/*Style du texte, paragraphe*/
+
+.boxDescription {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding: 0 3rem 3rem 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 0.5rem 0.5rem 0;
+  }
+  @media screen and (max-width: 350px) {
+    justify-content: start;
+    width: 125%;
+    margin-left: 0.25rem;
+    margin-top: 0.35rem;
+  }
+}
+
+.description {
+  display: flex;
+  align-items: end;
+  justify-items: end;
+  width: 50%;
+  background-color: var(--dark);
+  border-radius: 25px;
+  opacity: 80%;
+  color: var(--light);
+  padding: 1rem;
+  font-family: var(--text-font);
+  font-size: 1.1rem;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 0.8rem;
+  }
+}
