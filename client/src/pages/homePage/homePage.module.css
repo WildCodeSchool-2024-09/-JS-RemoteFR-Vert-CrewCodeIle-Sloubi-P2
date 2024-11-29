@@ -1,0 +1,24 @@
+.titleSlide {
+  font-family: var(--title-font);
+  color: var(--light);
+  font-size: 3rem;
+  text-align: center;
+  margin: 2% 0;
+  @media screen and (min-width: 500px) {
+    font-size: 5rem;
+  }
+}
+
+.backgroundPage {
+  background-image: url(https://image.freepik.com/free-photo/natural-dark-oak-texture-macro-extremely-high-resolution-photo_463999-970.jpg);
+  background-attachment: fixed;
+  box-shadow: inset var(--dark) 0 0 150rem 10rem;
+  background-size: cover;
+  padding: 2em 0;
+  width: auto;
+  height: 100%;
+
+  @media screen and (max-width: 768px) {
+    box-shadow: inset var(--dark) 0 0 50rem 7rem;
+  }
+}

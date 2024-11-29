@@ -1,0 +1,125 @@
+.footerMain {
+  background: linear-gradient(to bottom, var(--light) 2px, var(--dark) 7px);
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--text-font);
+}
+
+.section {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  align-items: end;
+  padding-top: 5vw;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.footerMiddle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  font-family: var(--title-font);
+  @media screen and (max-width: 768px) {
+    width: auto;
+  }
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 200px;
+  width: 25%;
+  gap: 1vw;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    height: 100px;
+  }
+}
+
+.footerRight {
+  height: 200px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1vw;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    width: auto;
+    height: 100px;
+    padding-bottom: 5vw;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  gap: 1vw;
+  @media screen and (max-width: 768px) {
+    width: auto;
+  }
+}
+
+.miniLogoAnimation {
+  width: 25px;
+  transition: all 0.1s ease-out;
+}
+
+.miniLogoAnimation:hover {
+  transform: scale(1.5);
+}
+
+.miniLogoAnimation:active {
+  transform: rotate(180deg);
+}
+
+.logoClass {
+  width: 200px;
+  margin-top: 1vw;
+  margin-bottom: 3vw;
+  transition: all 0.5s ease-out;
+}
+
+.logoClass:hover {
+  transform: rotate(-360deg);
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: solid var(--light) 1px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 2vw;
+  padding-bottom: 5vw;
+  font-family: var(--text-font);
+  @media screen and (max-width: 768px) {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: 80%;
+    text-align: center;
+  }
+}
+.link {
+  color: var(--warm-color);
+}
+.link:hover {
+  text-decoration: underline;
+}

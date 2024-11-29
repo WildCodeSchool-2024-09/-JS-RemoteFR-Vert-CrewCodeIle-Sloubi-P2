@@ -1,0 +1,49 @@
+.comment {
+  width: 40vw;
+  margin: 1vh auto;
+  padding: 2vw;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 450px) {
+    width: 80vw;
+    gap: 0;
+    border-radius: 30px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 80vw;
+    gap: 0;
+    border-radius: 30px;
+  }
+}
+.userInfo {
+  display: flex;
+  gap: 1em;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    gap: 1em;
+    padding-left: 1em;
+  }
+}
+.h2 {
+  font-size: 1em;
+  font-family: var(--title-font);
+
+  @media screen and (max-width: 450px) {
+    margin-top: 0.2em;
+  }
+}
+.userComment {
+  font-family: var(--text-font);
+  font-size: 1.2em;
+  width: 35vw;
+  word-wrap: break-word;
+  @media screen and (max-width: 450px) {
+    width: 80vw;
+    padding: 1em 1em;
+  }
+}

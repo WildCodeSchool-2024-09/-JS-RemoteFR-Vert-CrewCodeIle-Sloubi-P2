@@ -1,0 +1,117 @@
+/* contenaire des cartes */
+
+.sliderFolder {
+  position: relative;
+  background-image: url(../../assets/images/parchment-background.png);
+  box-shadow: inset #daae5d 0 0 5vw 5vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  width: 95%;
+  height: 17rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
+  transition-duration: 0.3s;
+  @media screen and (min-width: 500px) {
+    height: 30rem;
+    width: 100%;
+  }
+  @media screen and (min-width: 992px) {
+    box-shadow: inset #daae5d 0 0 3vw 3vw;
+  }
+}
+
+/* carte centrale */
+
+.cardSlider {
+  position: absolute;
+  min-width: 5rem;
+  max-width: 5rem;
+  height: 100%;
+  transition-duration: 0.5s;
+  @media screen and (min-width: 500px) {
+    transform: scale(1.5);
+    height: 55%;
+  }
+  @media screen and (min-width: 1000px) {
+    height: 58%;
+    transform: scale(1.8);
+  }
+}
+
+/* carte de gauche */
+
+.cardSliderLeft {
+  opacity: 80%;
+  position: absolute;
+  width: 9rem;
+  height: 55%;
+  transition-duration: 0.5s;
+  left: 18vw;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
+/* carte de droite */
+
+.cardSliderRight {
+  opacity: 80%;
+  position: absolute;
+  width: 9rem;
+  height: 55%;
+  transition-duration: 0.5s;
+  right: 18vw;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
+/* bouttons */
+
+.buttonSlider {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.buttonSlider:hover {
+  cursor: pointer;
+  transform: scale(1.19);
+}
+
+.buttonLeft {
+  left: 4vw;
+  background: none;
+  border: none;
+  background-image: url(../../assets/images/arrow_left.png);
+  background-size: cover;
+  background-position: right;
+  height: 4rem;
+  width: 7em;
+
+  @media screen and (max-width: 500px) {
+    height: 2.5rem;
+    width: 4.2em;
+    left: 2vw;
+  }
+}
+
+.buttonRight {
+  background: none;
+  border: none;
+  right: 4vw;
+  background-image: url(../../assets/images/arrow_right.png);
+  background-size: cover;
+  background-position: right;
+  height: 4rem;
+  width: 7em;
+
+  @media screen and (max-width: 500px) {
+    height: 2.5rem;
+    width: 4.2em;
+    right: 2vw;
+  }
+}
